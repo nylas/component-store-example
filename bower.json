@@ -1,0 +1,22 @@
+{
+  "name": "admin",
+  "version": "0.0.0",
+  "homepage": "",
+  "authors": [
+    "Ben Gotow <bengotow@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "~0.13.3",
+    "reflux": "~0.2.7",
+    "underscore": "~1.8.3",
+    "react-router": "~0.13.3",
+  }
+}

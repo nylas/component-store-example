@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+
+    <!-- Bootstrap -->
+    <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Could be inline styles, but we want to keep the example JSX as clean as possible -->
+    <style>
+    .actions,
+    .messages {
+        display:block;
+        margin:auto;
+        width:50%;
+        max-width:600px;
+        border:1px solid rgba(0,0,0,0.2);
+        margin-bottom:20px;
+    }
+    .actions {
+        border:0;
+    }
+    .message {
+        background-color: white;
+        margin: 4px;
+        text-align: left;
+        padding: 6px;
+        border-left: 4px solid transparent;
+    }
+    .message.unread {
+        border-left: 4px solid lightblue;
+    }
+    .message.selected {
+        background-color: cornflowerblue;
+        color: white;
+    }
+    .message .subject {
+        font-weight: bold;
+        font-size:1.1em;
+    }
+    .message .from {
+        font-size: 0.9em;
+    }
+    .debug {
+        background-color: rgba(0,0,0,0.2);
+        border-top:1px solid #ccc;
+        padding:20px;
+    }
+    .btn {
+        border:1px solid rgba(0,0,0,0.4);
+        background-color: rgba(255,255,255,0.5);
+        border-radius:6px;
+        padding:6px;
+        margin-right:6px;
+    }
+    .btn:hover {
+        background-color: rgba(0,0,0,0.2);
+    }
+    .registered-region-visible {
+        border:1px dashed red;
+    }
+    </style>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="application"></div>
+
+    <!-- Dependency Javascript -->
+    <script src="./bower_components/react/react-with-addons.js"></script>
+    <script src="./bower_components/react-router/build/umd/ReactRouter.min.js"></script>
+    <script src="./bower_components/reflux/dist/reflux.min.js"></script>
+    <script src="./bower_components/underscore/underscore-min.js"></script>
+
+    <!-- Application Javascript -->
+    <script src="./src/actions.js"></script>
+    <script src="./src/components/route-welcome.cjsx" type="text/cjsx"></script>
+    <script src="./src/components/flexbox.cjsx" type="text/cjsx"></script>
+    <script src="./src/components/injected-component.cjsx" type="text/cjsx"></script>
+    <script src="./src/components/injected-component-label.cjsx" type="text/cjsx"></script>
+    <script src="./src/components/injected-component-set.cjsx" type="text/cjsx"></script>
+    <script src="./src/components/unsafe-component.cjsx" type="text/cjsx"></script>
+    <script src="./src/stores/data-store.js"></script>
+    <script src="./src/stores/message-store.js"></script>
+    <script src="./src/stores/component-store.js"></script>
+    <script src="./src/app.cjsx" type="text/cjsx"></script>
+
+    <!-- Compile CJSX in the Browser -->
+    <script type="text/javascript" src="https://wzrd.in/standalone/coffee-react-browser"></script>
+  </body>
+</html>
