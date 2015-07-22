@@ -22,6 +22,7 @@ To run the sample project, run the commands below and visit [http://localhost:90
 
 ```
 npm install
+bower install
 grunt connect
 ```
 
