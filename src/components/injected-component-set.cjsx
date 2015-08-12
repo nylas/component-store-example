@@ -67,11 +67,11 @@ class InjectedComponentSet extends React.Component
     flexboxClassName = @props.className ? ""
     exposedProps = @props.exposedProps ? {}
 
-    elements = @state.components.map (component) ->
-      if component.containerRequired is false
-        <component key={component.displayName} {...exposedProps} />
+    elements = @state.components.map (Component) ->
+      if Component.containerRequired is false
+        <Component key={Component.displayName} {...exposedProps} />
       else
-        <UnsafeComponent component={component} key={component.displayName} {...exposedProps} />
+        <UnsafeComponent component={Component} key={Component.displayName} {...exposedProps} />
 
 
     if @state.visible
@@ -89,4 +89,3 @@ class InjectedComponentSet extends React.Component
 
     components: ComponentStore.findComponentsMatching(@props.matching)
     visible: ComponentStore.showComponentRegions()
-

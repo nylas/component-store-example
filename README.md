@@ -1,14 +1,9 @@
 Building for Plugins with React & Flux
 ----
 
-----
+<a href="https://raw.githubusercontent.com/nylas/component-store-example/master/screenshot/demo.png"><img src="https://raw.githubusercontent.com/nylas/component-store-example/master/screenshot/demo.png" width="500" /></a>
 
-**Check out [https://github.com/nylas/component-store-example](https://github.com/nylas/component-store-example) for the latest version of this code and dicussion!**
-
-----
-
-
-This sample code demonstrates the three concepts we covered in our talk in a small app that implements a message list.
+This sample code demonstrates the concepts we discussed at [ReactEurope 2015](https://www.youtube.com/watch?v=Uu4Yz2HmCgE) in a small app that implements a message list with a "mark as read" plugin:
 
 1. Using a single, central DataStore to eliminate store interdependencies and allow plugins to modify data in unexpected ways.
 

@@ -61,12 +61,12 @@ class InjectedComponent extends React.Component
     className = @props.className ? ""
     className += "registered-region-visible" if @state.visible
 
-    component = @state.component
+    Component = @state.component
 
-    if component.containerRequired is false
-      element = <component ref="inner" key={component.displayName} {...exposedProps} />
+    if Component.containerRequired is false
+      element = <Component ref="inner" key={Component.displayName} {...exposedProps} />
     else
-      element = <UnsafeComponent ref="inner" component={component} key={component.displayName} {...exposedProps} />
+      element = <UnsafeComponent ref="inner" component={Component} key={Component.displayName} {...exposedProps} />
 
     if @state.visible
       <div className={className}>
